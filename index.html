@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="body">
+    <header class="header">
+      <div class="container">
+
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.header -->
+
+    <div class="modal" id="header-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/cancel.png" alt="icon: close" loading="lazy" width="16" height="16" />
+        </a>
+        <h4 class="modal__title">Обратная связь</h4>
+        <form action="send.php" method="POST" class="modal__form form" novalidate="novalidate">
+          <div class="modal__form-top">
+            <label for="theme" class="modal__label-select">Тема</label>
+            <select id="theme" class="modal__form-select" required="" name="select">
+              <option value="" hidden="">Выберите тему</option>
+              <option value="Сотрудничество">Сотрудничество</option>
+              <option value="Предложение">Предложения</option>
+            </select>
+          </div>
+
+          <div class="modal__form-middle">
+            <label for="message" class="modal__label-message">Сообщение</label>
+            <textarea
+              class="modal__form-message"
+              id="message"
+              name="message"
+              required=""
+            ></textarea>
+          </div>
+
+          <div class="modal__form-bottom">
+            <label for="email" class="modal__label-email">Email</label>
+            <input
+              type="email"
+              class="input modal__form-input"
+              id="email"
+              name="email"
+              required=""
+              autocomplete="off"
+            />
+          </div>
+          <div class="checkbox modal__form-agree">
+            <input id="check" type="checkbox" class="modal__form-checkbox" name="box" required="" />
+            <label for="check" class="checkbox-label modal__form-text"
+              >Согласен с обработкой данных</label
+            >
+          </div>
+          <div class="modal__form-submit">
+            <button type="submit" class="modal__form-btn btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
